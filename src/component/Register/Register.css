@@ -1,0 +1,17 @@
+.Register {
+    box-shadow: 0 3px 6px 0px rgba(0,0,0,0.16), 0 3px 6px 0px rgba(0,0,0,0.23);
+    width: 85%;
+    margin: 150px auto;
+    max-width: 500px;
+  }
+  
+  .Register .Title {
+      font-size: 24px;
+      padding: 12px 0;
+  }
+
+  @media (min-width: 576px) {
+    .Register {
+        width: 70%;
+    }
+  }

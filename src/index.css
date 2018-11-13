@@ -12,3 +12,41 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.ant-layout {
+  background-color:#f0f2f5;
+  
+}
+.components-layout-demo-custom-trigger .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+.components-layout-demo-custom-trigger .trigger:hover {
+  color: #1890ff;
+}
+
+.components-layout-demo-custom-trigger .logo {
+  height: 32px;
+  background: rgba(255,255,255,.2);
+  margin: 16px;
+}
+.loginfrom {
+  max-width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin:  0 auto;
+  transform: translate(-50%,-50%);
+}
+.loginfrom .login-form {
+  max-width: 300px;
+}
+.loginfrom .login-form-forgot {
+  float: right;
+}
+.loginfrom .login-form-button {
+  width: 100%;
+}

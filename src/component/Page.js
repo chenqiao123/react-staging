@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Carousel } from 'antd';
+import { Link} from 'react-router-dom';
 import gif1 from '../asset/img/1.gif';
 import jpg12 from '../asset/img/12.jpg';
 import jpg1 from '../asset/img/1.jpg';
@@ -23,6 +24,7 @@ export function Page(params) {
      <img src={jpg4} className="imgshow" alt="jpg4"/>
      <img src={jpg5} className="imgshow" alt="jpg5"/>
      <a className="bottom-a" onClick={params.onClick} href> </a>
+     <Link to="/sub1/detail">列表详情页</Link>
     </div>)
     
 }

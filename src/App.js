@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import {Page} from './component/Page'
+import { Layout } from 'antd';
+import MainPage from './Main'
+import Landing from './Landing'
+
 import './App.css';
 
+const { Content } = Layout;
+// 整体布局
+
 class App extends Component {
-  down=()=>{
-    console.log("点击下载======")
-    window.location.href="https://bz.game3379.com/newpages/download/1/3805/1";
-  }
+
+ 
   render() {
+    // let template = <Landing />;
+    // // 用户是否登录成功
+    // if (this.props.isAuthenticated) {
+    //   template = <MainPage />;
+    // }
     return (
-      <div className="App">
-      
-        <Page onClick={this.down}></Page>
+      <div>{!this.props.isAuthenticated&&<Landing />}
+      {this.props.isAuthenticated&&<MainPage />}
       </div>
     );
   }

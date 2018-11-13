@@ -1,0 +1,46 @@
+.Login {
+  width: 80%;
+ 
+  width: 300px;
+  padding: 1%;
+  border-radius: 10px;
+  background-color: transparent;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(200px, 20vw);
+  box-shadow: 0 3px 6px 0px rgba(0,0,0,0.16), 0 3px 6px 0px rgba(0,0,0,0.23);
+}
+
+.Login .Header {
+    color: #fff;
+    font-size: 34px;
+    font-weight: normal;
+    padding: 24px 0;
+    text-align: left;
+    background: transparent;
+}
+
+ .Login form {
+    padding: 24px;
+   
+}
+.Login form .show{
+    width: 180px;
+    height: 48px;
+    border-radius: 3px;
+    color: #fff;
+    float: left;
+    outline: none;
+    border:none;
+    background-color: #00A0E9;
+    margin-top: 18px; 
+}
+
+@media (min-width: 576px) {
+    .Login {
+        max-width: 400px;
+        width: 60%;
+    }
+}

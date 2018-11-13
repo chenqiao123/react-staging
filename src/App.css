@@ -1,4 +1,8 @@
 @import '~antd/dist/antd.css';
+body{
+  /* overflow: hidden; */
+  height: 100%;
+}
 .App {
   text-align: center;
 }
