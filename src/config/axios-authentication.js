@@ -1,10 +1,8 @@
 import axios from 'axios';
-import { getipconfig } from '../getipconfig';
-import { message} from 'antd';
-const getip =  getipconfig();
-const testUrl = getip.serverip;
+import {swurlclass} from '../root'
+
 const instance = axios.create({
-    baseURL: testUrl,
+    baseURL: swurlclass.getSwurl(),
     headers:{
         'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8',      //改这里就好了
     },

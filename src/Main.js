@@ -60,7 +60,7 @@ class MainPage extends Component {
       <Link to="/">主页</Link>
     </Breadcrumb.Item>
   )].concat(extraBreadcrumbItems);
-  console.log("这里有什么错误呢?",breadcrumbItems)
+  // console.log("这里有什么错误呢?",breadcrumbItems)
     return (
       <Layout className="components-layout-demo-custom-trigger">
         <SiderLeft

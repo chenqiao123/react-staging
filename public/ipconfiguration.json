@@ -1,0 +1,8 @@
+
+{
+		"authoritySwitch": false,
+		"serverip": "http://192.168.1.128:7911",
+		"authorityServer": "http://192.168.1.130:9777",
+		"wsServer": "ws://192.168.1.130:8999",
+		"DataServer": "http://192.168.1.128:7911"
+	}

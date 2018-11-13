@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 const supportsHistory = 'pushState' in window.history
 ReactDOM.render(
 <BrowserRouter>
-    <App isAuthenticated={true}  basename={"/homepage"} forceRefresh={!supportsHistory}/>
+    <App isAuthenticated={false}  basename={"/homepage"} forceRefresh={!supportsHistory}/>
   </BrowserRouter>, 
   document.getElementById('root'));
 

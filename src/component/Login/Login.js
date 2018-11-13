@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import {swurlclass} from '../../root'
 import './Login.css'
 const FormItem = Form.Item;
 class Login extends Component {
@@ -8,6 +9,7 @@ class Login extends Component {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
           if (!err) {
+            console.log("这个数据呢?是什么",swurlclass.getSwurl())
             console.log('Received values of form: ', values);
           }
         });
