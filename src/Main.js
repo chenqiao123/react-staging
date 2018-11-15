@@ -30,7 +30,8 @@ class MainPage extends Component {
     });
   }
   componentDidMount() {
-    let height = document.body.clientHeight
+    let height = document.body.clientHeight;
+    console.log("minHeight=====",height)
     this.setState({ minHeight: height - 150 })
     window.addEventListener('resize', this.resizeBind)
   }
@@ -39,8 +40,9 @@ class MainPage extends Component {
   }
   // 浏览器窗口发生改变的时候进行调用
   resizeBind = () => {
-    let height = document.body.clientHeight
-    this.setState({ minHeight: height - 128 })
+    let height = document.body.clientHeight;
+    console.log("minHeight=====",height)
+    this.setState({ minHeight: height - 150 })
   }
   render() {
     const { location } = this.props;
