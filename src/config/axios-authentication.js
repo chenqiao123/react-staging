@@ -1,8 +1,8 @@
 import axios from 'axios';
-import {swurlclass} from '../root'
+// import {swurlclass} from '../root'
 
 const instance = axios.create({
-    baseURL: swurlclass.getSwurl(),
+    baseURL: "/",
     headers:{
         'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8',      //改这里就好了
     },

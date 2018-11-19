@@ -25,7 +25,7 @@ const webpack = require('webpack');
     //       }
     //   }))
    
- console.log("这里值是=========2",config)
+//  console.log("这里值是=========2",config)
         config = injectBabelPlugin(
          ['import', { libraryName: 'antd', libraryDirectory: 'es', style: 'css' }],
     config,
