@@ -1,0 +1,68 @@
+.addNewuserToRole .ant-modal-body {
+  float: left;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+}
+.addNewuserToRole .gamelsit {
+  float: left;
+  width: 100%;
+  min-height: 300px;
+}
+.addNewuserToRole .gamelsit .ant-checkbox-group {
+  max-height: 380px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.addNewuserToRole .gamelsit .ant-checkbox-group .ant-checkbox-group-item {
+  height: 18px;
+  min-width: 200px;
+  line-height: 18px;
+  margin: 8px;
+  width: 100%;
+}
+.addNewuserToRole .showGameList {
+  float: left;
+  height: 100%;
+  width: 100%;
+}
+.addNewuserToRole .showGameList .gamelsit {
+  width: 100%;
+}
+.addNewuserToRole .showGameList .gamelsit label:first-child {
+  width: 100%;
+}
+.addNewuserToRole .selectgame {
+  float: left;
+  width: 50%;
+}
+.addNewuserToRole .showgame {
+  float: left;
+  width: 50%;
+  height: 100%;
+  padding-left: 30px;
+}
+.addNewuserToRole .showgame .hasSelect {
+  float: left;
+}
+.addNewuserToRole .showgame div {
+  height: 18px;
+  line-height: 18px;
+  margin: 8px 0;
+  color: rgba(51, 88, 123, 0.8);
+}
+.addNewuserToRole .showgame div .anticon {
+  cursor: pointer;
+}
+.addNewuserToRole .showgame .data-content {
+  float: left;
+  width: 100%;
+  height: 350px;
+  overflow-y: auto;
+}
+.addNewuserToRole .showgame .btn {
+  float: left;
+}
+.addNewuserToRole .showgame .btn .ant-btn {
+  margin: 0 10px;
+}

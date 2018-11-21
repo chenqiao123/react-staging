@@ -1,0 +1,99 @@
+@import "../../../asset/base.less";
+.ChannelManagement {
+
+        .ant-table-thead {
+            th {
+                background-color: fade(@bg-color, 40%);
+                text-align: left;
+                color: @font-color;
+                padding: 12px 8px;
+                max-width: 310px;
+            }
+        }
+        .ant-table-body {
+            text-align: center;
+            font-size: 14px;
+            .ant-table-row:nth-of-type(even) {
+                background: fade(@bg-color, 10%);
+            }
+            td {
+                text-align: center;
+                padding: 12px 8px;
+                border: none;
+                max-width: 310px;
+                text-align: left;
+                .ant-table-row-collapsed {
+                    float: left;
+                    text-align: center;
+                    color: @button
+                }
+                .stop {
+                    color: @error
+                }
+                .editable-cell {
+                    max-height: 80px;
+                    min-width: 80px;
+                    min-height: 32px;
+                    position: relative;
+                    display: inline-block;
+                    .editable-cell-text-wrapper {
+                        padding: 5px;
+                        max-width: 300px;
+                        max-height: 80px;
+                    }
+                    .editable-cell-input-wrapper {
+                        .ant-select {
+                            max-width: 160px;
+                            max-height: 80px;
+                            min-width: 120px;
+                            .ant-select-selection--multiple {
+                                overflow-y: auto;
+                                max-height: 80px;
+                                height: auto;
+                            }
+                        }
+                        .ant-input {
+                            max-width: 200px;
+                        }
+                        .ant-calendar-picker {
+                            max-width: 120px;
+                        }
+                        .idfirst {
+                            float: left;
+                            margin: 0;
+                        }
+                        .idlast {
+                            max-width: 100px;
+                        }
+                    }
+                    .editable-cell-icon {
+                        display: none;
+                        ;
+                    }
+                    .editable-cell-icon,
+                    .editable-cell-icon-check {
+                        position: absolute;
+                        right: -30px;
+                        width: 30px;
+                        cursor: pointer;
+                        line-height: 32px;
+                    }
+                }
+                .editable-cell:hover {
+                    .editable-cell-icon {
+                        display: inline-block;
+                    }
+                }
+            }
+            .tablesuccuss {
+                color: @succeed
+            }
+            .tableyic {
+                color: @warning
+            }
+            .tableerror {
+                color: @error
+            }
+        }
+   
+}

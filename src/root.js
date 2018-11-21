@@ -3,6 +3,7 @@
  */
 //http://192.168.10.17:8090/loginPost
 import axios from 'axios';
+import { getBeforeDate } from './component/Utilities/CommonFuncs'
 // 全局的后台ip配置文件
 export const swurlclass={
     swurl:"",
@@ -24,6 +25,7 @@ export const getipconfig = (rooturl) => {
         }).then(res => {
         console.log("请求回来的数据====",res.data)
         swurlclass.SetSwurl(res.data)
+        gloabdata.setTimeVal(getBeforeDate(6),getBeforeDate(0, true))
         })
     } catch (error) {
         // errorCallback(error.data); //异常出错
@@ -48,6 +50,7 @@ export const root = () => {
             // console.log("请求回来的数据==========",data,datas)
             // swurl = datas;
             getipconfig(datas)
+            
         
         })
     } catch (error) {
@@ -57,4 +60,22 @@ export const root = () => {
     }
 }
     //  return swurl
+}
+// 全局的书记
+export const gloabdata={
+    startTime:"",
+    endTime:"",
+    // 设置全局时间
+    setTimeVal:function (startTime,endTime){
+        this.startTime=startTime;
+        this.endTime=endTime;
+    },
+    // 获取全局时间
+    getTimeVal:function(){
+        let time={
+            startTime:this.startTime,
+            endTime:this.endTime
+        }
+        return time
+    }
 }

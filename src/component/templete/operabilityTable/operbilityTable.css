@@ -1,0 +1,87 @@
+.ChannelManagement .ant-table-thead th {
+  background-color: rgba(185, 197, 208, 0.4);
+  text-align: left;
+  color: #33587b;
+  padding: 12px 8px;
+  max-width: 310px;
+}
+.ChannelManagement .ant-table-body {
+  text-align: center;
+  font-size: 14px;
+}
+.ChannelManagement .ant-table-body .ant-table-row:nth-of-type(even) {
+  background: rgba(185, 197, 208, 0.1);
+}
+.ChannelManagement .ant-table-body td {
+  text-align: center;
+  padding: 12px 8px;
+  border: none;
+  max-width: 310px;
+  text-align: left;
+}
+.ChannelManagement .ant-table-body td .ant-table-row-collapsed {
+  float: left;
+  text-align: center;
+  color: #1f8ded;
+}
+.ChannelManagement .ant-table-body td .stop {
+  color: #f94673;
+}
+.ChannelManagement .ant-table-body td .editable-cell {
+  max-height: 80px;
+  min-width: 80px;
+  min-height: 32px;
+  position: relative;
+  display: inline-block;
+}
+.ChannelManagement .ant-table-body td .editable-cell .editable-cell-text-wrapper {
+  padding: 5px;
+  max-width: 300px;
+  max-height: 80px;
+}
+.ChannelManagement .ant-table-body td .editable-cell .editable-cell-input-wrapper .ant-select {
+  max-width: 160px;
+  max-height: 80px;
+  min-width: 120px;
+}
+.ChannelManagement .ant-table-body td .editable-cell .editable-cell-input-wrapper .ant-select .ant-select-selection--multiple {
+  overflow-y: auto;
+  max-height: 80px;
+  height: auto;
+}
+.ChannelManagement .ant-table-body td .editable-cell .editable-cell-input-wrapper .ant-input {
+  max-width: 200px;
+}
+.ChannelManagement .ant-table-body td .editable-cell .editable-cell-input-wrapper .ant-calendar-picker {
+  max-width: 120px;
+}
+.ChannelManagement .ant-table-body td .editable-cell .editable-cell-input-wrapper .idfirst {
+  float: left;
+  margin: 0;
+}
+.ChannelManagement .ant-table-body td .editable-cell .editable-cell-input-wrapper .idlast {
+  max-width: 100px;
+}
+.ChannelManagement .ant-table-body td .editable-cell .editable-cell-icon {
+  display: none;
+}
+.ChannelManagement .ant-table-body td .editable-cell .editable-cell-icon,
+.ChannelManagement .ant-table-body td .editable-cell .editable-cell-icon-check {
+  position: absolute;
+  right: -30px;
+  width: 30px;
+  cursor: pointer;
+  line-height: 32px;
+}
+.ChannelManagement .ant-table-body td .editable-cell:hover .editable-cell-icon {
+  display: inline-block;
+}
+.ChannelManagement .ant-table-body .tablesuccuss {
+  color: #00d578;
+}
+.ChannelManagement .ant-table-body .tableyic {
+  color: #f8881f;
+}
+.ChannelManagement .ant-table-body .tableerror {
+  color: #f94673;
+}

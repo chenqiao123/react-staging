@@ -5,7 +5,7 @@ import { SiderLeft } from './SiderLeft'
 import { Topheader } from './Topheader'
 // import { BreadcrumbNav } from './component/public/BreadcrumbNav'
 // 测试路由page1
-import { Page } from './component/Page'
+import Page  from './component/Page'
 //测试详情路由二
 import {Pagedetail} from './component/Pagedetail'
 import './App.css';

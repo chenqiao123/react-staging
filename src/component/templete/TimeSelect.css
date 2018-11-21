@@ -1,0 +1,29 @@
+.timewrapper {
+  overflow: hidden;
+}
+.timewrapper ul {
+  overflow: hidden;
+  margin-bottom: 0px;
+  float: left;
+  width: 553px;
+  padding-left: 0;
+}
+.timewrapper ul li {
+  list-style: none;
+  overflow: hidden;
+}
+.timewrapper li {
+  float: left;
+  margin: 0 1%;
+  line-height: 32px;
+  cursor: pointer;
+}
+.timewrapper .active {
+  color: #3B86FF;
+}
+.timewrapper .active .ant-input {
+  border-color: #3B86FF;
+}
+.timewrapper .timeshow {
+  margin-left: 6px;
+}

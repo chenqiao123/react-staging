@@ -482,6 +482,7 @@ export const PlanProductionTable=(header,data)=>{
                         case 1:showvalue="进行中";break;
                         case -1:showvalue="终止";break;
                         case 2:showvalue="暂停";break;
+                        default:;
                     }
                     obj.data.push(showvalue) 
                 }else{
@@ -492,4 +493,72 @@ export const PlanProductionTable=(header,data)=>{
         }
     }
  return obj
+}
+// 复选框通过id找name
+export const searchIdToName = (data, idArray) => {
+    let namearry = [];
+    for (let i = 0; i < data.length; i++) {
+        if ($.inArray(data[i].value, idArray) > -1) {
+            namearry.push(data[i])
+        }
+    }
+    return namearry
+}
+// 复选框通过name找id
+export const searchNameToId = (data, NameArray) => {
+    let idarry = [];
+    for (let i = 0; i < data.length; i++) {
+        if ($.inArray(data[i].labe, NameArray) > -1) {
+            idarry.push(data[i])
+        }
+    }
+    return idarry
+}
+// 渠道组件的
+export const ConstructPostData = (data) => {
+    console.log("这里的只是",data)
+    //获取每个游戏提交的数组
+    let tempdata = [];
+    for (let i = 0; i < data.length; i++) {
+        // 表明选择了渠道
+
+        if (data[i].checkedList.length > 0) {
+            // console.log("data[i].checkedList.length",data[i].checkedList.length)
+            // 选择当前游戏的所有渠道
+            let str = data[i].value
+            if (data[i].showcheckedListname.length === 1 && data[i].showcheckedListname["0"].key === "-1") {
+                str += ":all"
+            } else {
+                // 选择多个渠道，又没有全选
+                str += ":"
+                for (let j = 0; j < data[i].showcheckedListname.length; j++) {
+                    if (j === data[i].showcheckedListname.length - 1) {
+                        str += data[i].showcheckedListname[j].key
+                    } else {
+                        str += data[i].showcheckedListname[j].key + ","
+                    }
+
+                }
+            }
+            tempdata.push(str)
+        }
+    }
+    // console.log("最后的渠道数据是",tempdata)
+    return tempdata
+}
+export const getnewpostdata = (data, org) => {
+    console.log("data,org", data, org)
+   let datashow = data[0].split(":")
+       // console.log("datashow===", datashow)
+   let newdata = [];
+   for (let i = 0; i < org.length; i++) {
+       let temp = org[i].split(":")
+       // console.log("datashow0===,temp", datashow[0],temp)
+       if (datashow[0] !== temp[0]) {
+           newdata.push(org[i])
+       }
+   }
+   newdata.push(data[0])
+   console.log("zuihoudezhi", newdata)
+   return newdata
 }
