@@ -4,12 +4,12 @@ import '../asset/page.css';
 import { Link } from 'react-router-dom';
 import { gloabdata } from '../root'
 import TimeSelect from './templete/TimeSelect'
-import { getBeforeDate,setEchartStratTime,DateDiff } from './Utilities/CommonFuncs'
+import { getBeforeDate,setEchartStratTime,DateDiff,getdefaultRoleData } from './Utilities/CommonFuncs'
 import NewmemberModal from './templete/peers/NewmemberModal'
 import NewGameChannelModal from './templete/tree/NewGameChannelModal'
 import Channelist from './templete/operabilityTable/Channelist'
 import BaseInformation from './templete/eachartAndTable/BaseInformation'
-// import NewGameRoleModal from './templete/grouppeers/NewGameRoleModal'
+import NewGameRoleModal from './templete/grouppeers/NewGameRoleModal'
 // ui样式在
 
 import { from } from 'rxjs';
@@ -36,9 +36,26 @@ class Page extends Component {
             dataZoomsendTime:getBeforeDate(0, true),
             tabkey:"1",
             DateDiff:7,
-
-
+            relevancedata:[{roleid:"R5637181107",
+            rolename:"权限一般用户",
+            sysgroupid:"default",
+            sysgroupname:"其他",
+            syslid:"JLHDcb3459f0eee2c571b943573ae3a11504664108",
+            sysname:"权限中心",
+            }],//默认选择的特色角色权限
+            channelrolemodifytag:false,
+            gamerolelist:[{"label":"超能大陆","value":"2",
+            "data":[{"roleid":"R5637181107","rolename":"权限一般用户","sysgroupname":"其他",
+            "sysgroupid":"default","sysname":"权限中心","syslid":"JLHDcb3459f0eee2c571b943573ae3a11504664108"}]},
+            {"label":"尘缘","value":"14","data":[]},{"label":"兵器少女","value":"10","data":[]}],       
+            UserRole:[],
+           
         }
+    }
+    componentDidMount(){
+        this.setState({
+            UserRole:[{"id":"default","name":"其他","item":[{"id":"JLHDcb3459f0eee2c571b943573ae3a11504664108","name":"权限中心","item":[{"id":"R40788180907","name":"权限中心管理员"},{"id":"R5637181107","name":"权限一般用户"}]},{"id":"JLHD7b50ac2e7a3f6e19692d7bf9863548241513912683","name":"服务器列表","item":[]},{"id":"JLHD77a305c565711bd182a1acd28c05bfb81516262599","name":"内充系统demo","item":[{"id":"R7577180907","name":"未命名"},{"id":"R4521180907","name":"未命名"},{"id":"R1378180907","name":"未命名"},{"id":"R6719180907","name":"未命名"}]},{"id":"JLHD18a4d55859ff14ec303958b39de8c36d1519866661","name":"日志分析工具","item":[]},{"id":"JLHDeb4540ad09aeb8cdc3d5445d17479fdb1522631503","name":"崩溃日志分析","item":[{"id":"R1671180907","name":"未命名"}]},{"id":"JLHD148d5cb120067339347d7456ac574da91528875633","name":"质量分析","item":[]},{"id":"JLHDd96abee3df4de2f3e7c5012f5ff62f471539132758","name":"协同中心","item":[]}]}]
+        })
     }
     /* 头部时间切换*/
     currentFunc = (currentState) => {//0今天 1昨天 2近七天 3近14天
@@ -178,6 +195,29 @@ class Page extends Component {
     onLogout=()=>{
         console.log("退出")
     }
+      //修改游戏角色
+      modifiGameRole = () => {
+        this.setState({
+            channelrolemodifytag: true,
+        })
+
+    }
+
+    // 关闭角色模态框
+    onHandleCancelGameRole = () => {
+        console.log("请求成功")
+        this.setState({
+            channelrolemodifytag: false
+        })
+    }
+    onOkGameRolelSucess = () => {
+        // 成功之后关闭模态框
+        // this.props.onOkChannelSucess()
+        this.onHandleCancelGameRole();
+    }
+    onBindingRole = (postid, showdata) => {
+
+    }
     render() {
         const { currentState,
             startTime,
@@ -197,8 +237,13 @@ class Page extends Component {
             dataZoomstartTime,
             dataZoomendTime,
             tabkey,
-           DateDiff,
+            DateDiff,
+            relevancedata,
+            UserRole,
+            channelrolemodifytag,
+            gamerolelist
         } = this.state
+        console.log("特殊角色的默认数据值是",this.state.UserRole)
         return (
             <div>
                  <Row>
@@ -250,11 +295,33 @@ class Page extends Component {
                         <Col span={8}>
                             <Button
                                 type="primary" icon="plus"
-                                onClick={this.onAddNewUser}>
+                                onClick={this.modifiGameRole}>
                                 平级多选组件
                          </Button>
-
-                            <NewmemberModal
+                         <NewGameRoleModal
+                        key={""}
+                        uid={"66"}
+                        gid={"2"}
+                        relevancedata={relevancedata}
+                        onHandleCancel={this.onHandleCancelGameRole}
+                        onOkGameRolelSucess={this.onOkGameRolelSucess}
+                        addRoletag={channelrolemodifytag}
+                        gamename={"超能大陆"}//显示游戏的名字
+                        gamerolelist={gamerolelist}
+                        roledata={UserRole}//原始系统，用户所在的系统
+                        defaultCheackRole={getdefaultRoleData(relevancedata).id}
+                        defaultShowRole={getdefaultRoleData(relevancedata).showdata}
+                        onBindingRole={this.onBindingRole}
+                    />
+                           
+                        </Col>
+                        <Col span={8}>
+                            <Button
+                                type="primary" icon="plus"
+                                onClick={this.onAddNewUser}>
+                                分组平级
+                         </Button>
+                         <NewmemberModal
                                 addNewmembertag={addNewmembertag}
                                 originalUserlist={originalUserlist}
                                 onHandleCancel={this.onHandleCancel}
@@ -263,13 +330,6 @@ class Page extends Component {
                                 onDepartmentSuccess={this.onDepartmentSuccess}
                             // GetUserManagemengGroup={this.props.GetUserManagemengGroup}
                             />
-                        </Col>
-                        <Col span={8}>
-                            <Button
-                                type="primary" icon="plus"
-                                onClick={this.onAddNewUser}>
-                                分组平级
-                         </Button>
                         </Col>
                     </Row>
                     <Row className="bgc">

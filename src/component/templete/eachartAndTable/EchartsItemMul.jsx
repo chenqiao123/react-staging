@@ -64,7 +64,8 @@ class MulItem extends Component {
                 bottom:postiontoobartepm
             },
             grid: {
-                left: 100
+                // left: 100
+                // width:"100%"
             },
             xAxis: {
                 type: horizontal ? 'value' : 'category',

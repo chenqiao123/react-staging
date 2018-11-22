@@ -1,0 +1,197 @@
+
+@import "../../../asset/base.less";
+.addNewuserToUserlist {
+    overflow: hidden;
+    .showGameList {
+        .selectgame {
+            .gamelsit {
+                overflow-y: scroll;
+                height: 410px;
+                .ant-checkbox-group {
+
+                    overflow-y: hidden;
+                    overflow-x: hidden;
+                    width: 100%;
+                    .ant-checkbox-group-item {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .showgame{
+            .data-content{
+                 .anticon{
+                    display: inline-block;
+                    float: right;
+                    margin-right: 3%;
+                    cursor: pointer;
+                }
+            }
+            .btn{
+           float: right; 
+        }
+        }
+        
+    }
+    .ant-modal-body{
+        .Multistagewrapper .wrapper-left .contentPar{
+            height: calc(~"100% - 115px");
+        }
+    }
+}
+.Multistagewrapper {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid fade(@font-color, 20%);
+    border-radius: 4px;
+    height: 520px;
+    .wrapper-right,
+    .wrapper-left {
+        width: 50%;
+        float: left;
+        padding: 2% 0;
+        .MultistageCheckItem {
+            height: 100%;
+            >div {
+                &:first-child {
+                    margin-top: 0;
+                }
+                ;
+                overflow:hidden;
+                margin-top: 4%;
+            }
+            .ant-checkbox-wrapper {
+                margin-left: 0px;
+                display: inline-block;
+                min-width: 52%;
+
+                span {
+                    color: @font-color
+                }
+            }
+        }
+    }
+    .wrapper-right {
+        padding: 2%;
+        h3 {
+            font-size: 14px;
+            color: fade(@font-color, 40%)
+        }
+
+    }
+    .wrapper-left {
+        // width: 48%;
+        .number {
+            padding: 4%;
+            color: @button;
+        }
+          .contentPar{
+            padding: 0 0 0 24px;
+            height: calc(~"100% - 155px");
+            overflow:hidden;
+            .content {
+            height: 100%;
+            overflow-y: auto;
+            width: calc(~"100% + 10px");
+            >div {
+                &:first-child {
+                    margin-top: 0;
+                }
+                ;
+                overflow:hidden;
+                margin-top: 4%;
+            }
+            }
+          }
+        
+        height: 100%;
+        border-left:1px solid fade(@font-color, 20%);
+        h3 {
+            color: fade(@font-color, 40%);
+            font-size: 14px;
+        }
+        .DelItem {
+            .anticon {
+                display: inline-block;
+                margin-right: 3%;
+                border-radius: 50%;
+                padding: .5%;
+                float: right;
+                background-color: fade(@font-color, 20%);
+                cursor: pointer;
+            }
+
+            div {
+                display: inline-block;
+                float: left;
+                width: 100%;
+                color: @font-color;
+            }
+        }
+        .MultistageCheckItem {
+            .footer {
+                padding: 2%;
+                text-align: right;
+                box-shadow: 0px 0px 4px 0px fade(@font-color, 40%);
+                .ant-btn-primary {
+                    margin-right: 4%;
+                }
+            }
+        }
+    }
+}
+
+.MultistageCheckBoxs {
+    .ant-tabs-content {
+        padding: 2% 0;
+        padding-top: 0;
+    }
+    .ant-tabs.ant-tabs-card {
+        .ant-tabs-bar {
+            border-bottom: none;
+            .ant-tabs-nav-container {
+                height: auto;
+            }
+        }
+    }
+    .ant-tabs-bar {
+        border-bottom: none;
+        margin-bottom: 0px;
+        .ant-tabs-nav-container {
+            height: auto;
+        }
+        .ant-tabs-nav {
+            width: 100%;
+            margin-bottom: 8px;
+            .ant-tabs-tab {
+                // width: 32%;
+                display: block;
+                float: left;
+                height: 20px;
+                line-height: 20px;
+                margin: 3px 1px;
+                color: fade(@font-color, 60%);
+                background-color: @baise;
+                border: none;
+                font-size: 14px;
+                border-radius: 4px;
+                padding: 0 6px;
+            }
+            ;
+            .ant-tabs-tab-active {
+                color: @button;
+                padding-bottom: 0px;
+            }
+        }
+    }
+    .ant-tabs-tabpane-active{
+         height: 380px;
+         overflow: hidden;
+        .panPar{
+            width: calc(~"100% + 10px");
+            height: 380px;
+            overflow-y: auto;
+        }
+    }
+}

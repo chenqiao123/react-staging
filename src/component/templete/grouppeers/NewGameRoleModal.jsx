@@ -4,10 +4,10 @@
 import React from 'react';
 import { Modal, message} from 'antd';
 // import BindingRole from '../../PublicComponent/BindingRole'
-import { setGameRole } from '../../../public/CommonFuncs'
+import { setGameRole } from '../../Utilities/CommonFuncs'
 // import { ajaxGame } from '../../../public/ajax'
 import Multistage from './Multistage/Multistage/Multistage'
-
+import './NewGameRoleModal.css'
 
 class NewGameRoleModal extends React.Component {
     constructor(props) {
@@ -43,7 +43,7 @@ class NewGameRoleModal extends React.Component {
             "game_permits": pritment,
         }
 
-        ajaxGame(data, this.sucess, this.error)
+        // ajaxGame(data, this.sucess, this.error)
 
     }
     sucess = () => {

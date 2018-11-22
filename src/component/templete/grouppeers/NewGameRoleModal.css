@@ -1,0 +1,170 @@
+.addNewuserToUserlist {
+  overflow: hidden;
+}
+.addNewuserToUserlist .showGameList .selectgame .gamelsit {
+  overflow-y: scroll;
+  height: 410px;
+}
+.addNewuserToUserlist .showGameList .selectgame .gamelsit .ant-checkbox-group {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 100%;
+}
+.addNewuserToUserlist .showGameList .selectgame .gamelsit .ant-checkbox-group .ant-checkbox-group-item {
+  width: 100%;
+}
+.addNewuserToUserlist .showGameList .showgame .data-content .anticon {
+  display: inline-block;
+  float: right;
+  margin-right: 3%;
+  cursor: pointer;
+}
+.addNewuserToUserlist .showGameList .showgame .btn {
+  float: right;
+}
+.addNewuserToUserlist .ant-modal-body .Multistagewrapper .wrapper-left .contentPar {
+  height: calc(100% - 115px);
+}
+.Multistagewrapper {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(51, 88, 123, 0.2);
+  border-radius: 4px;
+  height: 520px;
+}
+.Multistagewrapper .wrapper-right,
+.Multistagewrapper .wrapper-left {
+  width: 50%;
+  float: left;
+  padding: 2% 0;
+}
+.Multistagewrapper .wrapper-right .MultistageCheckItem,
+.Multistagewrapper .wrapper-left .MultistageCheckItem {
+  height: 100%;
+}
+.Multistagewrapper .wrapper-right .MultistageCheckItem > div,
+.Multistagewrapper .wrapper-left .MultistageCheckItem > div {
+  overflow: hidden;
+  margin-top: 4%;
+}
+.Multistagewrapper .wrapper-right .MultistageCheckItem > div:first-child,
+.Multistagewrapper .wrapper-left .MultistageCheckItem > div:first-child {
+  margin-top: 0;
+}
+.Multistagewrapper .wrapper-right .MultistageCheckItem .ant-checkbox-wrapper,
+.Multistagewrapper .wrapper-left .MultistageCheckItem .ant-checkbox-wrapper {
+  margin-left: 0px;
+  display: inline-block;
+  min-width: 52%;
+}
+.Multistagewrapper .wrapper-right .MultistageCheckItem .ant-checkbox-wrapper span,
+.Multistagewrapper .wrapper-left .MultistageCheckItem .ant-checkbox-wrapper span {
+  color: #33587b;
+}
+.Multistagewrapper .wrapper-right {
+  padding: 2%;
+}
+.Multistagewrapper .wrapper-right h3 {
+  font-size: 14px;
+  color: rgba(51, 88, 123, 0.4);
+}
+.Multistagewrapper .wrapper-left {
+  height: 100%;
+  border-left: 1px solid rgba(51, 88, 123, 0.2);
+}
+.Multistagewrapper .wrapper-left .number {
+  padding: 4%;
+  color: #1f8ded;
+}
+.Multistagewrapper .wrapper-left .contentPar {
+  padding: 0 0 0 24px;
+  height: calc(100% - 155px);
+  overflow: hidden;
+}
+.Multistagewrapper .wrapper-left .contentPar .content {
+  height: 100%;
+  overflow-y: auto;
+  width: calc(100% + 10px);
+}
+.Multistagewrapper .wrapper-left .contentPar .content > div {
+  overflow: hidden;
+  margin-top: 4%;
+}
+.Multistagewrapper .wrapper-left .contentPar .content > div:first-child {
+  margin-top: 0;
+}
+.Multistagewrapper .wrapper-left h3 {
+  color: rgba(51, 88, 123, 0.4);
+  font-size: 14px;
+}
+.Multistagewrapper .wrapper-left .DelItem .anticon {
+  display: inline-block;
+  margin-right: 3%;
+  border-radius: 50%;
+  padding: .5%;
+  float: right;
+  background-color: rgba(51, 88, 123, 0.2);
+  cursor: pointer;
+}
+.Multistagewrapper .wrapper-left .DelItem div {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  color: #33587b;
+}
+.Multistagewrapper .wrapper-left .MultistageCheckItem .footer {
+  padding: 2%;
+  text-align: right;
+  box-shadow: 0px 0px 4px 0px rgba(51, 88, 123, 0.4);
+}
+.Multistagewrapper .wrapper-left .MultistageCheckItem .footer .ant-btn-primary {
+  margin-right: 4%;
+}
+.MultistageCheckBoxs .ant-tabs-content {
+  padding: 2% 0;
+  padding-top: 0;
+}
+.MultistageCheckBoxs .ant-tabs.ant-tabs-card .ant-tabs-bar {
+  border-bottom: none;
+}
+.MultistageCheckBoxs .ant-tabs.ant-tabs-card .ant-tabs-bar .ant-tabs-nav-container {
+  height: auto;
+}
+.MultistageCheckBoxs .ant-tabs-bar {
+  border-bottom: none;
+  margin-bottom: 0px;
+}
+.MultistageCheckBoxs .ant-tabs-bar .ant-tabs-nav-container {
+  height: auto;
+}
+.MultistageCheckBoxs .ant-tabs-bar .ant-tabs-nav {
+  width: 100%;
+  margin-bottom: 8px;
+}
+.MultistageCheckBoxs .ant-tabs-bar .ant-tabs-nav .ant-tabs-tab {
+  display: block;
+  float: left;
+  height: 20px;
+  line-height: 20px;
+  margin: 3px 1px;
+  color: rgba(51, 88, 123, 0.6);
+  background-color: #fff;
+  border: none;
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 0 6px;
+}
+.MultistageCheckBoxs .ant-tabs-bar .ant-tabs-nav .ant-tabs-tab-active {
+  color: #1f8ded;
+  padding-bottom: 0px;
+}
+.MultistageCheckBoxs .ant-tabs-tabpane-active {
+  height: 380px;
+  overflow: hidden;
+}
+.MultistageCheckBoxs .ant-tabs-tabpane-active .panPar {
+  width: calc(100% + 10px);
+  height: 380px;
+  overflow-y: auto;
+}

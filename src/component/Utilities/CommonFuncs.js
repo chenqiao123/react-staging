@@ -562,3 +562,36 @@ export const getnewpostdata = (data, org) => {
    console.log("zuihoudezhi", newdata)
    return newdata
 }
+// 活动默认的角色id的值
+export const getdefaultRoleData = (data) => {
+    let dataobj = { "id": [], "showdata": [] }
+    for (let i = 0; i < data.length; i++) {
+        let obj = { "id": data[i].syslid, "name": data[i].sysname, "item": [{ "id": data[i].roleid, "name": data[i].rolename }] }
+        dataobj.showdata.push(obj)
+        dataobj.id.push(data[i].roleid)
+    }
+    return dataobj
+}
+export const setGameRole = (data, org, id) => {
+
+    let child = org
+    if (child.length > 0) {
+        // 有游戏角色存在
+        for (let i = 0; i < child.length; i++) {
+            if (child[i].value === id) {
+                child[i].data = { "id": data }
+            } else {
+                child[i].data = { "id": getDefalutRoleid(child[i].data) }
+            }
+        }
+        return child
+    }
+}
+// 获取默认选中角色id
+export const getDefalutRoleid = (data) => {
+    let id = []
+    for (let i = 0; i < data.length; i++) {
+        id.push(data[i].roleid)
+    }
+    return id
+}

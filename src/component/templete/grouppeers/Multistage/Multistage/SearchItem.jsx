@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import { Icon,Input,Select} from 'antd';
-import '../../../../style/SearchItem.css';
+import './SearchItem.css';
 const Option = Select.Option;
 function findData(ordata,inputdata) {
   console.log("zheilideshi",ordata)

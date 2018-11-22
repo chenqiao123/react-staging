@@ -73,10 +73,11 @@ function transformSearchData(data,tag) {
 function arrayUnique2(arr, name) {
   var hash = {};
   return arr.reduce(function (item, next) {
-    hash[next[name]] ? '' : hash[next[name]] = true && item.push(next);
-    // if (!hash[next[name]]){
-    //   hash[next[name]] = true && item.push(next)
-    // }else{
+    // hash[next[name]] ? '' : hash[next[name]] = true && item.push(next);
+    if (!hash[next[name]]){
+      hash[next[name]] = true && item.push(next)
+    }
+    // else{
       
     // }
     return item;
