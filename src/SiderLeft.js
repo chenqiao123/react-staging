@@ -22,9 +22,9 @@ export function SiderLeft(props) {
             <Menu.Item key="1">
             <Link to="/sub1">all</Link>
             </Menu.Item>
-            <Menu.Item key="2"><Link to="/sub2">跳转链接2</Link></Menu.Item>
-            <Menu.Item key="3"><Link to="/sub3">跳转链接3</Link></Menu.Item>
-            <Menu.Item key="4"><Link to="/sub4">跳转链接4</Link></Menu.Item>
+            <Menu.Item key="2"><Link to="/Hour">散点图</Link></Menu.Item>
+            <Menu.Item key="3"><Link to="/hotmap">热力地图</Link></Menu.Item>
+            <Menu.Item key="4"><Link to="/hotLine">心电图</Link></Menu.Item>
           </SubMenu>
           <SubMenu key="sub2" title={<span><Icon type="laptop" />subnav 2</span>}>
             <Menu.Item key="5">option5</Menu.Item>

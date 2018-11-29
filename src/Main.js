@@ -8,6 +8,10 @@ import { Topheader } from './Topheader'
 import Page  from './component/Page'
 //测试详情路由二
 import {Pagedetail} from './component/Pagedetail'
+import Hour  from './component/Hour'
+import HotLine  from './component/HotLine'
+import HotMap  from './component/HotMap'
+
 import './App.css';
 const breadcrumbNameMap = {
   '/sub1': '所有列表',
@@ -81,6 +85,9 @@ class MainPage extends Component {
               {/* 全部列表 */}
             <Route path="/sub1" exact component={Page} />
             <Route path="/sub1/detail" exact component={Pagedetail} />
+            <Route path="/Hour" exact component={Hour} />
+            <Route path="/hotmap" exact component={HotMap} />
+            <Route path="/hotLine" exact component={HotLine} />
             <Route render={() => <span>Home Page</span>} />
             </Switch>
           </Content>

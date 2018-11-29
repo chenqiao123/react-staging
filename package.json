@@ -2,7 +2,7 @@
   "name": "react-cli",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://192.168.1.60/chenqiao",
+  "homepage": "http://170.240.110.155/chenqiao",
   "dependencies": {
     "antd": "^3.10.7",
     "axios": "^0.18.0",

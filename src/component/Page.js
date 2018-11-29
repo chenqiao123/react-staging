@@ -10,6 +10,7 @@ import NewGameChannelModal from './templete/tree/NewGameChannelModal'
 import Channelist from './templete/operabilityTable/Channelist'
 import BaseInformation from './templete/eachartAndTable/BaseInformation'
 import NewGameRoleModal from './templete/grouppeers/NewGameRoleModal'
+
 // ui样式在
 
 import { from } from 'rxjs';
@@ -246,6 +247,7 @@ class Page extends Component {
         console.log("特殊角色的默认数据值是",this.state.UserRole)
         return (
             <div>
+               
                  <Row>
                     <Channelist gameToname={"尘缘"}
                         ref="getTable"
